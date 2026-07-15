@@ -1,9 +1,10 @@
 import time 
 
-soldier_first_name = input("What is your first name? ")
-soldier_last_name =  input("What is your last name? ")
+soldier_first_name = input("What is the soldier's first name? ")
+soldier_last_name =  input("What is the soldier's last name? ")
+soldier_rank = input("What is the soldier's rank? ")
 push_ups = input("How many push ups were completed? ")
-run_time = input("What was the soldier's run time? ").split(":")
+run_time = input("What was the soldier's run time? Format(MM:SS) ").split(":")
 run_time_minutes = int(run_time[0])
 run_time_seconds = int(run_time[1])
 

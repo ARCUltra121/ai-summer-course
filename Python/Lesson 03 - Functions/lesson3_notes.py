@@ -46,28 +46,46 @@ import random
 #         print("This shouldn't even happen but i'm putting it here anyways....")
 
 #Problem 4
-student_num = int(input("How many students are in your class? "))
+# student_num = int(input("How many students are in your class? "))
 
-students = []
-student_grades = []
-class_avg = 0.0
+# students = []
+# student_grades = []
+# class_avg = 0.0
 
-for i in range(student_num):
-    students.append(input('Input student name: '))
-    student_grades.append(int(input('Input student grade: ')))
+# for i in range(student_num):
+#     students.append(input('Input student name: '))
+#     student_grades.append(int(input('Input student grade: ')))
 
-for grade in student_grades:
-    class_avg += grade
+# for grade in student_grades:
+#     class_avg += grade
 
-class_avg /= len(student_grades)
+# class_avg /= len(student_grades)
 
-student_grades_sorted = sorted(student_grades)
+# student_grades_sorted = sorted(student_grades)
 
-lowest_grade = student_grades_sorted[0]
-highest_grade = student_grades_sorted[-1]
+# lowest_grade = student_grades_sorted[0]
+# highest_grade = student_grades_sorted[-1]
 
-print(f'The lowest grade in class is: {lowest_grade}')
-print(f'The highest grade in class is: {highest_grade}')
-print(f' The class average is: {class_avg}')
+# print(f'The lowest grade in class is: {lowest_grade}')
+# print(f'The highest grade in class is: {highest_grade}')
+# print(f' The class average is: {class_avg}')
 
-print(f'The person with the highest grade in class is {students[student_grades.index(highest_grade)]}')
+# print(f'The person with the highest grade in class is {students[student_grades.index(highest_grade)]}')
+
+
+#  Class Problem numero Uno
+# another_random_number = random.randint(0, 100)
+
+# if another_random_number < 50:
+#     print("The number is less than 50.")
+# elif another_random_number > 50:
+#     print("The number is greater than 50.")
+# else:
+#     print("The number is 50.")
+
+# Class Problem Numero Dos
+def rectangleArea(input1, input2):
+    area = input1 * input2
+    return print(area)
+
+rectangleArea(12, 15)

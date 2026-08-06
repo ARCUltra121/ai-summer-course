@@ -131,3 +131,13 @@ def books_by_decade(books):
             decades[decade] = []
         decades[decade].append(book)
     return decades
+
+if __name__ == "__main__":
+    assert validate_isbn('1234567890')
+    assert validate_isbn('1234567890123')
+    assert validate_isbn('123-124-123-0')
+    assert validate_isbn('123 123 133 1')
+    assert validate_isbn('123')
+    assert validate_isbn('312425242354365234')
+    assert validate_isbn("12345678AB")
+    assert validate_isbn(1234567890)

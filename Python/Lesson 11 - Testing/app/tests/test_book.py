@@ -3,6 +3,7 @@ Unit tests for the Book module.
 Note: This file has incomplete coverage - some functions need tests!
 """
 
+from book import format_book_info
 import pytest
 from book import Book, validate_isbn
 
@@ -87,3 +88,10 @@ class TestBook:
 # - validate_isbn()
 # - format_book_info()
 # - books_by_decade()
+
+assert validate_isbn('1234567890')
+assert validate_isbn('1234567890123')
+assert validate_isbn('123-124-123-0')
+assert validate_isbn('123 123 133 1')
+
+assert format_book_info("Clean Code")

@@ -8,7 +8,7 @@ def check_rank(rank):
     ranks = ['Corporal', 'Sergeant', 'Lieutenant']
     checker = False
     for i in ranks:
-        if rank == ranks[i]:
+        if i == rank:
             checker = True
         else:
             pass

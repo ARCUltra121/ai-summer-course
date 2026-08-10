@@ -1,4 +1,4 @@
-import problem4
+import Python.Weekly_Problem_Set_complete.Week3.problem4
 
 name = input('What is your name soldier? ')
 fitness_score = int(input('What is your current fitness score? '))

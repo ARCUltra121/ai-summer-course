@@ -3,6 +3,7 @@
 1. Create a Virtual Machine on Azure with login credentials Username: Cohort6 and Password: Cohort6_AI2C_2975
 2. Note the IP address of the virtual machine, and change the IP address in the Small Project Intro slideshow.
 3. On the home directory of the VM, create a file that will encourage people to click on it (I named it "the_answers.txt").  Paste the following in the file.
+
 ```
 Whew -- you finally got logged in to Mission Control's main system.
 
@@ -18,8 +19,8 @@ without ever having felt sorry for itself.”
 
 You decide to move to Folder1 to poke around and try to find the files you need to fix.
 ```
-4. Create a folder on the home directory (I named it Folder1). 
 
+4. Create a folder on the home directory (I named it Folder1).
 5. Inside the folder, create a file (I named it crumpled_paper.).  Add the following text.
 
 ```
@@ -34,8 +35,8 @@ FIND, DU
 ```
 
 6. Also inside of Folder1, create an elaborate file system.  (I created 100 folders inside of 100 folders using: `mkdir -p Folder{1..100}/Folder{1..100})`
+7. Navigate to the end of two directories (I used Folder22/Folder26 and Folder37/Folder86).  In the first directory create a file named `telemetry_python_problem1.txt`.  Add the following text:
 
-7.  Navigate to the end of two directories (I used Folder22/Folder26 and Folder37/Folder86).  In the first directory create a file named `telemetry_python_problem1.txt`.  Add the following text:
 ```
 Okay, great.  You found the telemetry file.
 
@@ -49,7 +50,8 @@ Then the program should display the number of meters, centimeters, and millimete
 Once you solve this problem, proceed to find the resource file in the file system.
 ```
 
-In the second directory, create a file named `resource_pythonProblem2.txt` and add the text: 
+In the second directory, create a file named `resource_pythonProblem2.txt` and add the text:
+
 ```
 You find the resource file, and you are somewhat surprised to see that the problem that needs to be solved deals with
 food.
@@ -75,6 +77,7 @@ Once you have completed this, navigate to root directory to find Problem 3.
 8. Go to the root directory `/`
 9. Create a directory (I named it Problem3)
 10. Create a file named `problem3_statement.txt` and add the text (**Note:** You'll need to create a public GitHub repository and change the link in the write-up below.)
+
 ```
 Our inbound colonists rapidly approach Mars atmosphere, but we still do not have reliable comms with them.
 We must rapidly launch our spare rocket to establish comms and share the correct telemetry data with them before they smash into Mars!
@@ -105,15 +108,12 @@ To keep the International Space Station's file system clean, your solutions shou
 Finally, create a broadcast beacon with Earth to state that the crisis was averted.
 To do this, create a VM, host a website with a picture of your choice on the VM, and share the public IP address of your website with the International Space Station.
 ```
+
 11. Add input.txt (found with lesson materials.)
 
 **Note** This completes setting up the VM.  It would be wise to protect the filesystem and files from students by creating an instructor user that has read/write access, and remove the write access from the Cohort6 user.  To do this, follow the steps below.
 
 12. Create a new linux user for the instructor `sudo useradd instructor` and set the password `sudo passwd instructor`.  Don't forget the password.
-
 13. Create a group using `sudo addgroup <groupname>`.  Add the instructor user to this group.  `sudo usermod -a -G <groupname> <username>`
-
-14. Change file permissions to only accept the instructor group. `sudo chgrp <groupname> <Filename>
-
+14. Change file permissions to only accept the instructor group. `sudo chgrp <groupname></groupname> <Filename></filename>
 15. Remove the Cohort6 user from the sudo group `sudo deluser Cohort6 sudo`
-

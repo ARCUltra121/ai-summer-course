@@ -49,7 +49,7 @@ def process_reports(reports:list):
     return roster, ranks
 
 
-def show_available(roster):
+def show_available(roster:dict):
     available_names = []
 
     for name in roster:
@@ -119,15 +119,15 @@ dispatch(roster, "Kowalski")
 print()
 
 # Show updated status
-print("Updated status:")
+print("UPDATED STATUS:")
 print(f"  Santos   : {'deployed' if roster['Santos'].deployed else 'available'}")
 print(f"  Kowalski : {'deployed' if roster['Kowalski'].deployed else 'available'}")
 print()
 
 # Fitness report
-print("Fitness report:")
+print("FITNESS REPORT:")
 fitness = fitness_report(roster)
 
-print("High (80+):", fitness["high"])
-print("Medium (60-79):", fitness["medium"])
-print("Low (<60):", fitness["low"])
+print("High 80+:", fitness["high"])
+print("Medium 60-79:", fitness["medium"])
+print("Low <60:", fitness["low"])

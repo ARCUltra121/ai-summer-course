@@ -9,6 +9,7 @@ Work on a new branch named `python/problem-set-4` for this problem set.  Your su
 You may need to enable those workflows in GitHub Actions.  The workflows will not run automatically before they have been enabled.
 
 ## Submitting Your Work
+
 As stated above, you should create a new branch and checkout that branch for this problem set called `python/problem-set-4`.  The general flow is shown below.
 
 1. Fork the `AFC-AI2C/summer-course` repo (you only need to do this once)
@@ -45,25 +46,26 @@ reports = [
 **Your task:**
 
 - **Create a `Soldier` class** with the following:
+
   - An `__init__` method that accepts `name`, `rank`, `fitness`, and `deployed` parameters
   - Store these as instance attributes using `self.name`, `self.rank`, `self.fitness`, and `self.deployed`
   - Add a `dispatch()` method that sets `self.deployed = True`
   - Add a `__str__` method that returns a formatted string with the soldier's information (e.g., `"Santos (PRIVATE, fitness: 91, deployed: False)"`)
-
 - Create a function named `process_reports()` that:
+
   - Takes a list of report strings as input
   - Returns two values: a dictionary of `Soldier` objects (keyed by name), and a set of unique ranks
   - Use a `for` loop to parse each report string with `.split("|")`, `.strip()`, and `.split(":")`
   - Use `.title()` on names, `.upper()` on ranks, and `.lower()` on status values to normalise the data
   - Create a `Soldier` object for each report and add it to the roster dictionary
   - Collect all unique ranks in a set
-
 - Write a function `show_available(roster)` that:
+
   - Takes the roster dictionary (containing `Soldier` objects) as input
   - Prints all soldiers where `deployed` is `False`, sorted alphabetically by name
   - Use `.sort()` on the list of available names
-
 - Write a function `dispatch(roster, name)` that:
+
   - Takes the roster dictionary and a soldier's name
   - Calls the `.dispatch()` method on the appropriate `Soldier` object
   - Prints a message if they are already deployed or not found
@@ -111,22 +113,23 @@ pantry_items = ["eggs", "butter", "salt", "pepper", "cheese", "milk", "bread", "
 **Your task:**
 
 - **Create a `Recipe` class** with the following:
+
   - An `__init__` method that accepts `name` and `ingredients` (a list of strings)
   - Store these as instance attributes
   - Add a `can_make(pantry_set)` method that returns `True` if all ingredients are in the pantry set, `False` otherwise
   - Add a `missing_ingredients(pantry_set)` method that returns a **sorted list** of ingredients not in the pantry
-
 - **Create a `Pantry` class** with the following:
+
   - An `__init__` method that accepts a list of ingredient strings
   - Store the ingredients internally as a **set** for efficient lookups
   - Add an `add_ingredients(extra_ingredients)` method that adds new ingredients to the pantry
   - Add a `has(ingredient)` method that returns `True` if the ingredient is in the pantry
-
 - Create a function `create_recipes(recipe_data)` that:
+
   - Takes the recipe dictionary shown above
   - Returns a list of `Recipe` objects
-
 - Create a function `check_recipes(recipes, pantry)` that:
+
   - Takes a list of `Recipe` objects and a `Pantry` object
   - Uses a `for` loop to check each recipe
   - Prints whether each recipe can be made and — if not — what's missing
@@ -157,6 +160,7 @@ In your `__main__` block, ask the user for a comma-separated list of extra ingre
 **Your task:**
 
 - **Create a `LyricAnalyzer` class** with the following:
+
   - An `__init__` method that accepts a lyrics string
   - Store the lyrics as an instance attribute
   - In `__init__`, process the lyrics: use `.lower()` to normalise, `.replace()` to strip punctuation, and `.split()` to create a list of words
@@ -165,10 +169,10 @@ In your `__main__` block, ask the user for a comma-separated list of extra ingre
   - Add a `unique_word_count()` method that returns the number of unique words (hint: use a set)
   - Add a `most_common_word()` method that returns a tuple of `(word, count)` for the most frequently used word
   - Add a `print_report()` method that prints all words alphabetically with their counts, the unique word count, and the most common word
-
 - In your `__main__` block:
+
   - Create a multi-line string variable called `lyrics` with your chosen song lyrics. Here is an example:
-  
+
 ```python
 lyrics = """
 we will we will rock you
@@ -181,8 +185,8 @@ we will we will rock you
 """
 ```
 
-  - Create a `LyricAnalyzer` object with your lyrics
-  - Call the `.print_report()` method
+- Create a `LyricAnalyzer` object with your lyrics
+- Call the `.print_report()` method
 
 **Expected output (partial, using example lyrics):**
 
@@ -204,11 +208,13 @@ Most common word: 'we' — 6 times
 ### Challenge
 
 Add a `filter_stopwords(stop_words)` method to your `LyricAnalyzer` class that:
+
 - Takes a set of stop words (common filler words to ignore)
 - Creates a new filtered word list excluding stop words
 - Updates `self.words` with the filtered list
 
 Use this set for filtering:
+
 ```python
 stop_words = {"a", "the", "you", "your", "in", "on", "we", "be", "got"}
 ```
@@ -239,24 +245,25 @@ raw_data = [
 **Your task:**
 
 - **Create an `Animal` class** with the following:
+
   - An `__init__` method that accepts `name`, `species`, `age`, and `origin`
   - Store these as instance attributes
   - Add a `__str__` method that returns a formatted string like: `"Bubbles (dolphin, 12 years, from Ocean)"`
   - Add a `get_info()` method that prints the animal's details in a readable format
-
 - Create a function `build_registry(raw_data)` that:
+
   - Takes the list of comma-separated strings
   - Uses a `for` loop with `.split(",")` and `.strip()` to parse each entry
   - Creates an `Animal` object for each entry
   - Returns a dictionary where keys are animal names and values are `Animal` objects
-
 - Create a function `analyze_registry(registry)` that:
+
   - Takes the registry dictionary of `Animal` objects
   - Prints the total number of animals
   - Uses a set to collect and print all **unique species**
   - Uses a set to collect and print how many distinct **origins** the zoo's animals come from
-
 - In your `__main__` block:
+
   - Build the registry
   - Call `analyze_registry()`
   - Ask the user to enter an animal's name
